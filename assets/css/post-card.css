@@ -15,3 +15,7 @@
 .post-card a, .post-card i, .post-card p {
     color: var(--primary-text-color);
 }
+
+.post-card:hover {
+    border: 1px solid var(--primary-red);
+}

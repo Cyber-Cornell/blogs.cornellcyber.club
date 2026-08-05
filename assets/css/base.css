@@ -1,22 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap');
+
 :root {
-    --primary-text-color: #d7d7d7;
-    --alt-text-color: #989898;
-    --primary-red: #fb2139;
-    --alt-red: #ee828f;
-    --primary-bg: #1a1a1a;
-    --dots-bg: #5b5b5b;
-    --alt-bg: #232323;
-    --border-color: #969696;
+    --primary-text-color: #ffffff;
+    --alt-text-color: #5c5f6b;
+    --primary-red: #fa2139;
+    --alt-red: #e1dad3;
+    --primary-bg: #000000;
+    --alt-bg: #0a0a0a;
+    --border-color: rgba(225,218,211,0.3);
 }
 
 body {
     margin: 0;
     background-color: var(--primary-bg);
-    background-image: radial-gradient(circle at center, var(--dots-bg) 1px, transparent 0);
-    background-size: 40px 40px; 
     min-height: 100vh;
     width: 100%;
-    font-family: "MesloNerdFont", monospace;
+    font-family: "Roboto Mono", monospace;
     color: var(--primary-text-color)
 }
 
@@ -26,7 +25,8 @@ body {
 
 .alt-backing {
     background-color: var(--alt-bg);
-    border: solid var(--border-color) 1px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
 }
 
 .info {
@@ -49,5 +49,18 @@ a:link {
 }
 
 a:visited {
+    color: var(--primary-red);
+}
+
+a:hover {
     color: var(--alt-red);
+}
+
+.cursor {
+    color: var(--primary-red);
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
 }
